@@ -6,7 +6,7 @@ describe('Main Menu Navigation', () => {
     })
 
     it('Should open Home page', () => {
-        cy.contains('World Class Software Creators');
+        NavigationPage.homepagetext.should('contain.text','World Class AI Enabled Software Creators');
     })
 
     it('Should Redirect to Process web page', () => {
@@ -16,8 +16,8 @@ describe('Main Menu Navigation', () => {
     })
 
     it('Should Redirect to Services web page', () => {
-        NavigationPage.footerServicesLink.click();
-        cy.contains('We build Solutions around you');
+        NavigationPage.footerServicesLink.first().click();
+        cy.contains('AI ENABLED SOLUTIONS, BUILT AROUND YOU');
         cy.url().should('include', 'services.html');
     })
 

@@ -1,6 +1,6 @@
 class NavigationPage {
     get footerProcessLink() { return cy.get('.jg-footer-link[href="process.html"]') };
-    get footerServicesLink() { return cy.get('.jg-footer-link[href="services.html"]') };
+    get footerServicesLink() { return cy.get('[href="services.html"]') };
     get footerClientsLink() { return cy.get('.jg-footer-link[href="clients.html"]') };
     get footerContactLink() { return cy.get('.jg-footer-link[href="contact.html"]') };
     get footerTeamLink() { return cy.get('.jg-footer-link[href="team.html"]') };
@@ -13,5 +13,6 @@ class NavigationPage {
     get footerPressLink() { return cy.get('.jg-footer-link[href="https://insights.jahnelgroup.com/press"]') };
     get footerInsightsLink() { return cy.get('.jg-footer-link[href="https://insights.jahnelgroup.com"]') };
     get footerSubscribeLink() { return cy.get('.jg-footer-link[href="https://insights.jahnelgroup.com/subscribe"]').invoke('removeAttr', 'target') };
+    get homepagetext() {return cy.get('h3.unselectable.text-uppercase')}
 }
 export default new NavigationPage();
